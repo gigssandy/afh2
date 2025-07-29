@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFH Designs - Premium Bridal Beauty</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #d4af37;
+            --secondary: #8b4513;
+            --dark: #222;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .navbar {
+            background-color: rgba(0,0,0,0.8);
+            transition: all 0.3s;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(0,0,0,0.95);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .design-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .design-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .design-card img {
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            background: var(--secondary);
+            transform: scale(1.1);
+        }
+        
+        .section-header {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .resource-link {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .resource-link:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 80vh;
+                text-align: center;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h3 class="m-0">AFH Designs</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blouse">Blouse Designs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mehndi">Mehndi Designs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nailart">Nail Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold">Elevate Your Bridal Beauty</h1>
+                    <p class="lead">Custom designs that make you shine on your special day</p>
+                    <a href="#contact" class="btn btn-primary btn-lg mt-3">Book Consultation</a>
+                    <div class="mt-4">
+                        <a href="https://www.youtube.com/shorts/Dc1uEAqvq6E" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://x.com/AfhFacts" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://in.pinterest.com/pin/827958712785463703/" class="social-icon" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.linkedin.com/in/sandy-amazing-4a43ab234/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blouse Designs Section -->
+    <section id="blouse" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="display-4">Exquisite Blouse Designs</h2>
+                <p class="lead">Traditional craftsmanship meets contemporary style</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card design-card h-100">
+                        <img src="https://images.unsplash.com/photo-1590845947676-fa2576f401d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Net Blouse Design">
+                        <div class="card-body">
+                            <h5 class="card-title">Elegant Net Blouses</h5>
+                            <p class="card-text">Delicate net designs with intricate embroidery for a sophisticated look.</p>
+                            <a href="https://sandyjoyce.medium.com/the-timeless-grace-of-sleeveless-blouse-back-designs-8c4635c78541" class="btn btn-sm btn-primary" target="_blank">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card design-card h-100">
+                        <img src="https://images.unsplash.com/photo-1594035910387-f1d6b5ec5a1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="card-img-top" alt="Back Neck Design">
+                        <div class="card-body">
+                            <h5 class="card-title">Back Neck Masterpieces</h5>
+                            <p class="card-text">Stunning back designs that make a statement while maintaining elegance.</p>
+                            <a href="https://amazingandawesomefactshindi.blogspot.com/" class="btn btn-sm btn-primary" target="_blank">Blog Post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card design-card h-100">
+                        <img src="https://images.unsplash.com/photo-1594035910387-f1d6b5ec5a1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="card-img-top" alt="Modern Blouse">
+                        <div class="card-body">
+                            <h5 class="card-title">Contemporary Styles</h5>
+                            <p class="card-text">Modern interpretations of classic designs for the fashion-forward bride.</p>
+                            <a href="https://sandyjoyce.medium.com/modern-formal-saree-blouse-patterns-a-blend-of-style-0c155fd73866" class="btn btn-sm btn-primary" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="https://in.pinterest.com/pin/827958712785407718/" class="btn btn-outline-primary" target="_blank">View Pinterest Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mehndi Designs Section -->
+    <section id="mehndi" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="display-4">Intricate Mehndi Designs</h2>
+                <p class="lead">From traditional patterns to modern masterpieces</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card design-card h-100">
+                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" class="card-img-top" alt="Traditional Mehndi">
+                        <div class="card-body">
+                            <h5 class="card-title">Traditional Patterns</h5>
+                            <p class="card-text">Time-honored designs that celebrate cultural heritage.</p>
+                            <a href="https://www.tumblr.com/themysteriousearth/789942048335724544/modern-rose-mehndi-design-ideas-55-stunning?source=share" class="btn btn-sm btn-primary" target="_blank">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card design-card h-100">
+                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" class="card-img-top" alt="Modern Mehndi">
+                        <div class="card-body">
+                            <h5 class="card-title">Contemporary Art</h5>
+                            <p class="card-text">Innovative designs blending tradition with modern aesthetics.</p>
+                            <a href="https://sandyjoyce.medium.com/modern-instagram-trendy-mehndi-designs-tradition-meets-contemporary-fashion-ab7fd785c645" class="btn btn-sm btn-primary" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card design-card h-100">
+                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" class="card-img-top" alt="Bridal Mehndi">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Collections</h5>
+                            <p class="card-text">Exclusive designs created specifically for wedding celebrations.</p>
+                            <a href="https://x.com/AfhFacts/status/1948303955538448434" class="btn btn-sm btn-primary" target="_blank">See Examples</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="https://in.pinterest.com/pin/827958712785464116/" class="btn btn-outline-primary" target="_blank">Explore More on Pinterest</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nail Art Section -->
+    <section id="nailart" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="display-4">Bridal Nail Art</h2>
+                <p class="lead">The perfect finishing touch for your bridal look</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card design-card h-100">
+                        <img src="https://images.unsplash.com/photo-1596704017256-9c8a4c3e2a6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="card-img-top" alt="Classic Nails">
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Elegance</h5>
+                            <p class="card-text">Timeless designs that complement any bridal style.</p>
+                            <a href="https://in.pinterest.com/pin/827958712785407196/" class="btn btn-sm btn-primary" target="_blank">View Ideas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card design-card h-100">
+                        <img src="https://images.unsplash.com/photo-1596704017256-9c8a4c3e2a6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="card-img-top" alt="Glam Nails">
+                        <div class="card-body">
+                            <h5 class="card-title">Glamorous Styles</h5>
+                            <p class="card-text">Dazzling designs for brides who love sparkle.</p>
+                            <a href="https://x.com/AfhFacts/status/1948302043799519503" class="btn btn-sm btn-primary" target="_blank">See Tweets</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card design-card h-100">
+                        <img src="https://images.unsplash.com/photo-1596704017256-9c8a4c3e2a6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="card-img-top" alt="Cultural Nails">
+                        <div class="card-body">
+                            <h5 class="card-title">Cultural Fusion</h5>
+                            <p class="card-text">Designs that celebrate heritage with modern techniques.</p>
+                            <a href="https://in.pinterest.com/pin/827958712784841944/" class="btn btn-sm btn-primary" target="_blank">Get Inspired</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="display-4">Design Resources</h2>
+                <p class="lead">Explore more inspiration across our platforms</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Latest Articles</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-book-open me-2 text-primary"></i> <a href="https://sandyjoyce.medium.com/what-sets-modern-rose-mehndi-apart-is-its-versatility-29e7bef12ba3" class="resource-link" target="_blank">Modern Rose Mehndi Designs</a></li>
+                                <li class="mb-2"><i class="fas fa-book-open me-2 text-primary"></i> <a href="https://sandyjoyce.medium.com/pinterests-most-saved-royal-front-hand-mehndi-designs-recreated-2ad35f880331" class="resource-link" target="_blank">Royal Front Hand Designs</a></li>
+                                <li class="mb-2"><i class="fas fa-book-open me-2 text-primary"></i> <a href="https://amazingandawesomefactshindi.blogspot.com/2025/07/modern-rose-mehndi-design-trendy-twist.html" class="resource-link" target="_blank">Trendy Mehndi Twists</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Our Platforms</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fab fa-pinterest me-2 text-primary"></i> <a href="https://in.pinterest.com/pin/827958712785445321/" class="resource-link" target="_blank">Pinterest Collections</a></li>
+                                <li class="mb-2"><i class="fab fa-twitter me-2 text-primary"></i> <a href="https://x.com/AfhFacts" class="resource-link" target="_blank">Twitter Updates</a></li>
+                                <li class="mb-2"><i class="fab fa-tumblr me-2 text-primary"></i> <a href="https://www.tumblr.com/themysteriousearth" class="resource-link" target="_blank">Tumblr Portfolio</a></li>
+                                <li class="mb-2"><i class="fab fa-github me-2 text-primary"></i> <a href="https://github.com/gigssandy" class="resource-link" target="_blank">GitHub Projects</a></li>
+                                <li class="mb-2"><i class="fab fa-behance me-2 text-primary"></i> <a href="https://www.behance.net/downloadstoryig" class="resource-link" target="_blank">Behance Portfolio</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Additional Resources</h5>
+                            <div class="d-flex flex-wrap">
+                                <a href="https://www.slideshare.net/gigssandy" class="btn btn-sm btn-outline-primary me-2 mb-2" target="_blank">SlideShare</a>
+                                <a href="https://plaza.rakuten.co.jp/afhdesigns/diary/202507240000/" class="btn btn-sm btn-outline-primary me-2 mb-2" target="_blank">Rakuten Blog</a>
+                                <a href="https://boinc.berkeley.edu/test/show_user.php?userid=117085" class="btn btn-sm btn-outline-primary me-2 mb-2" target="_blank">BOINC</a>
+                                <a href="https://nationaldppcsc.cdc.gov/s/profile/005SJ00000VpdjpYAB" class="btn btn-sm btn-outline-primary me-2 mb-2" target="_blank">CDC Profile</a>
+                                <a href="https://lightroom.adobe.com/u/downloadstoryig" class="btn btn-sm btn-outline-primary me-2 mb-2" target="_blank">Lightroom</a>
+                                <a href="https://www.behance.net/downloadstoryig/resume" class="btn btn-sm btn-outline-primary me-2 mb-2" target="_blank">Behance Resume</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="display-4">Get In Touch</h2>
+                <p class="lead">Ready to create your dream bridal look?</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Service Interested In</label>
+                            <select class="form-select" id="service">
+                                <option selected>Select a service</option>
+                                <option>Blouse Design</option>
+                                <option>Mehndi Design</option>
+                                <option>Bridal Nail Art</option>
+                                <option>Complete Bridal Package</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Connect With Us</h5>
+                            <p class="card-text">Follow our latest designs and get daily inspiration:</p>
+                            
+                            <div class="d-flex flex-wrap mb-4">
+                                <a href="https://www.youtube.com/shorts/Dc1uEAqvq6E" class="social-icon me-2 mb-2" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a href="https://x.com/AfhFacts" class="social-icon me-2 mb-2" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://in.pinterest.com/pin/827958712785463703/" class="social-icon me-2 mb-2" target="_blank"><i class="fab fa-pinterest"></i></a>
+                                <a href="https://www.linkedin.com/in/sandy-amazing-4a43ab234/" class="social-icon me-2 mb-2" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.tumblr.com/themysteriousearth" class="social-icon me-2 mb-2" target="_blank"><i class="fab fa-tumblr"></i></a>
+                            </div>
+                            
+                            <h5 class="card-title mt-4">Visit Our Blog</h5>
+                            <a href="https://amazingandawesomefactshindi.blogspot.com/" class="btn btn-outline-primary" target="_blank">Explore Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>AFH Designs</h5>
+                    <p>Creating unforgettable bridal beauty since 2011.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#blouse" class="text-white">Blouse Designs</a></li>
+                        <li><a href="#mehndi" class="text-white">Mehndi Designs</a></li>
+                        <li><a href="#nailart" class="text-white">Nail Art</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-white">Copyright</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 AFH Designs. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://github.com/gigssandy" class="text-white me-3" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.behance.net/downloadstoryig" class="text-white me-3" target="_blank"><i class="fab fa-behance"></i></a>
+                    <a href="https://www.slideshare.net/gigssandy" class="text-white" target="_blank"><i class="fab fa-slideshare"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
